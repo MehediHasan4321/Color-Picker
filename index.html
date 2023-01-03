@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="continer">
+        <div class="display">
+            <div class="display-content">
+                <h3>Display Color</h3>
+                <button id="change-btn">Random Color</button>
+            </div>
+            <hr>
+            <div class="display-area" id="display-area">
+
+            </div>
+        </div>
+        <div class="display-control">
+            <div class="change-copy">
+                <h3>Change & Copy Color</h3>
+                <div>
+                    <button id="clicpboard-save-btn">Save</button>
+                    <button id="clicpboard-copy-btn">Copy</button>
+                </div>
+            </div>
+            <hr>
+            <div class="copy-area">
+                <h3>Select Copy Mood</h3>
+                <div class="copy-mood">
+                    <label for="hex">
+                        HEX
+                        <input type="radio" name="color-mode" id="hex-radio-input" value="hex" checked>
+                    </label>
+                    <label for="Rgb">
+                        RGB
+                        <input type="radio" name="color-mode" id="rgb-radio-input" value="rgb">
+                    </label>
+
+                </div>
+            </div>
+            <div class="hex-rgb-input">
+                <div class="hex-input">
+                    <label for="hex">Hex</label>
+                    <div class="hex-input-div">
+                        <input type="text" value="#" class="input-icon">
+                        <input type="text" class="hex" placeholder="000000" name="hex" id="hex-input">
+                    </div>
+                </div>
+                <div class="rgb-input">
+                    <label for="rgb">Rgb</label>
+                    <input type="text" name="rgb" placeholder="rgb(0,0,0)" id="rgb-input" disabled>
+                </div>
+            </div>
+            <div class="rgb-color-control">
+                <h3>Adjust RGB Color</h3>
+                <div class="range-div">
+                    <div class="red">
+                        <div class="color-name">
+                            <h4>Red</h4>
+                            <h4 id="color-slider-red-label">0</h4>
+                        </div>
+                        <input type="range" max="255" min="0" value="0" id="color-slider-red">
+                    </div>
+                    <div class="green">
+                        <div class="color-name">
+                            <h4>green</h4>
+                            <h4 id="color-slider-green-label">0</h4>
+                        </div>
+                        <input type="range" max="255" min="0" value="0" id="color-slider-green">
+                    </div>
+                    <div class="blue">
+                        <div class="color-name">
+                            <h4>blue</h4>
+                            <h4 id="color-slider-blue-label">0</h4>
+                        </div>
+                        <input type="range" max="255" min="0" value="0" id="color-slider-blue">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <h4 class="preset-title">Preset Colors</h4>
+            <hr>
+            <div class="preset-color-container" id="preset-color-parents">
+
+            </div>
+            <h4 class="preset-title">Custom Colors</h4>
+            <hr>
+            <div class="preset-color-container" id="custom-color-parents">
+
+            </div>
+        </section>
+        <section>
+            <h4 class="preset-title">Background Preferences</h4>
+            <hr>
+            <div class="background-img-container">
+                <div class=" background-left-container">
+                    <h4 class="background-left-container-heading">Background Preview</h4>
+                    <div class="background-left-content" id="background-left-container">
+
+                    </div>
+                    <div class="background-left-container-btn">
+                        <input type="file" accept="images/*" name="file" id="background-file-input">
+                        <button id="background-update-btn" class="bg-update-btn">Updaet</button>
+                        <button id="background-delete-btn" class="bg-delete-btn">Delete</button>
+                    </div>
+                </div>
+                <div class="background-right-container">
+                    <div id="bg-img-control">
+                        <div class="select-group">
+                            <h5>Background Size</h5>
+                            <select name="background-size" id="">
+                                <option value="auto">auto</option>
+                                <option value="cover">cover</option>
+                                <option value="inharit">inharit</option>
+                                <option value="contain">contain</option>
+                            </select>
+                        </div>
+                        <div class="select-group">
+                            <h5>Background Repeat</h5>
+                            <select name="background-repeat" id="">
+                                <option value="on-repeat">no-repeat</option>
+                                <option value="on-repeat">repeat</option>
+                            </select>
+                        </div>
+                        <div class="select-group">
+                            <h5>Background Position</h5>
+                            <select name="background-position" id="">
+                                <option value="center">center</option>
+                                <option value="left-top">Left-Top</option>
+                            </select>
+                        </div>
+                        <div class="select-group">
+                            <h5>Background Attachment</h5>
+                            <select name="background-attachment" id="">
+                                <option value="inital">Initial</option>
+                                <option value="fixed">Fixed</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
